@@ -1,20 +1,16 @@
-def convert_to_time(x):
-    hour = x // 60
-    min = x % 60
+def convert_to_time(number):
+    hour = number // 60
+    minute = number % 60
 
     if hour > 1:
-        if min > 1:
-            print(f"{hour} hours,{min} minutes")
-        elif min == 1:
-            print(f"{hour} hours,{min} minute")
-        else:
-            print(f"{hour} hours,{min:02d} minute")
+        if minute > 1 or minute == 0:
+            print(f"{hour} hours,{minute:02d} minutes")
+        elif minute == 1:
+            print(f"{hour} hours,{minute} minute")
     elif hour <= 1:
-        if min > 1:
-            print(f"{hour} hour,{min} minutes")
-        elif min == 1:
-            print(f"{hour} hour,{min} minute")
-        else:
-            print(f"{hour} hour,{min:02d} minute")
+        if minute > 1 or minute == 0:
+            print(f"{hour} hour,{minute:02d} minutes")
+        elif minute == 1:
+            print(f"{hour} hour,{minute} minute")
 
-convert_to_time(120)
+convert_to_time(121)

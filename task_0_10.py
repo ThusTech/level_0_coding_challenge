@@ -3,9 +3,9 @@ def common_letter(first_string, second_string):
     list_of_strings = list(set(first_string)&set(second_string))
 
     for letter in list_of_strings:
-        common = common + str(letter) + ", "
+        common = common + str(letter.lower()) + ", "
 
     print("Common letters: "+ common[:-2])
 
 
-common_letter("house","computers")
+common_letter("House","computHers")
